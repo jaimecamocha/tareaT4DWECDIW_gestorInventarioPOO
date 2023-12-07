@@ -1,0 +1,59 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="icono.ico" type="image/icon-x">
+    <title>GESTIÓN DE INVENTARIO</title>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/img/imgCabecera.png" alt="Gestión de inventario">
+        
+        <!-- Actualización del inventario -->
+        <h2>Introducir producto</h2>
+        <input type="text" id="nombre" placeholder="Nombre del producto"> 
+        <input type="number" id="cantidad" placeholder="Cantidad">
+        <input type="number" id="precio" placeholder="Precio">
+        <button id="agregarBtn">Agregar producto</button>
+        
+        <!-- Búsqueda de productos -->
+        <h2>Buscar producto</h2>
+        <input type="text" id="nombreBusqueda" placeholder="Producto a buscar">
+        <button id="buscarBtn">Buscar producto</button>
+        <br>
+        <div id="resultadoBusqueda"></div>
+        
+        <!-- Actualizar Inventario -->
+        <h2>Actualizar inventario</h2>
+        <input type="text" id="nombreActualizar" placeholder="Nombre del producto">
+        <input type="number" id="cantidadActualizar" placeholder="Cantidad a agregar">
+        <input type="number" id="precioActualizar" placeholder="Precio a actualizar">
+        <button id="actualizarBtn">Actualizar inventario</button> 
+        
+        <!-- Eliminación de productos -->
+        <h2>Eliminar producto</h2>
+        <input type="text" id="nombreEliminar" placeholder="Producto a eliminar">
+        <button id="eliminarBtn">Eliminar producto</button>
+        
+        <!-- Resumen del inventario -->
+        <h2>Resumen del inventario</h2>
+        <button id="mostrarBtn">Mostrar inventario</button>
+        <br>
+        <table id="tablaInventario">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio (€)</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyInventario">
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -3,7 +3,6 @@
     src: url('/assets/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
 }
 
-
 body {
     background: url('../assets/imgs/imgAlmacen.jpg') no-repeat center center fixed; /* DIW: imagen de fondo*/
     background-size: cover;
@@ -20,6 +19,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.cabeceraimagen {
+    animation: imgIntermitente 5s infinite;
+}
 
 h2 {
     font-size: 24px;
@@ -66,6 +68,8 @@ input {
     animation: aparecer 1s ease-in-out;
 }
 
+
+
 /* DIW */
 
 /* cuando se seleciona el texto de alguno de los h2 el color de fondo de este en vez de ser azul por defecto pasa a ser rojo */
@@ -85,3 +89,17 @@ h2::selection {
         transform: translateY(0);
     }
 }
+
+/* keyframe para hacer que la imagen de cabecera se vaya difuminando poco a poco */
+@keyframes imgIntermitente {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

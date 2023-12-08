@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('/assets/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+
+body {
+    background: url('../assets/imgs/imgAlmacen.jpg') no-repeat center center fixed; /* DIW: imagen de fondo*/
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0 auto 50px auto;
+}
+
+.container {
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-shadow: 2px 2px 2px #fff;
+    font-family: 'Oswald';
+}
+
+button {
+    background-color: #0074D9;
+    color: #fff; 
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+input {
+    font-size: 18px; 
+    padding: 5px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+#resultadoBusqueda, #resultadoInventario{
+    font-size: 20px;
+}
+
+#tablaInventario {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px auto 40px auto;
+}
+
+#tablaInventario th {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    animation: aparecer 1s ease-in-out;
+}
+
+#tablaInventario td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    animation: aparecer 1s ease-in-out;
+}
+
+/* DIW */
+
+/* cuando se seleciona el texto de alguno de los h2 el color de fondo de este en vez de ser azul por defecto pasa a ser rojo */
+h2::selection {
+    background: #FF0000;
+    color: #FFF;
+}
+
+/* keyframe para cuando se muestre el inventario*/
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
